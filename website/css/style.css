@@ -1,0 +1,430 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark blue/grey text */
+}
+
+a {
+    color: #007bff; /* Accent color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background: #333; /* Dark background for header */
+    color: #fff; /* Light text on dark background */
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    color: #007bff; /* Accent color on hover */
+    text-decoration: none;
+}
+
+/* Main Content Area */
+main {
+    padding: 0 20px; /* Add some horizontal padding to main content */
+}
+
+/* Hero Section */
+.hero {
+    background: #007bff; /* Accent color background */
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 20px; /* Space from header */
+    margin-bottom: 20px; /* Space before features */
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero button {
+    background-color: #fff; /* White button */
+    color: #007bff; /* Accent color text */
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #e2e6ea; /* Slightly darker on hover */
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+    margin-bottom: 20px; /* Space before footer */
+}
+
+.feature {
+    background: #fff; /* White background for feature boxes */
+    padding: 1.5rem;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px;
+    text-align: center;
+    flex-basis: 30%; /* Distribute space among features */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+    transition: opacity 0.5s ease-in-out; /* For smooth fade-in */
+}
+
+.feature p:first-child { /* Placeholder for icon */
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: #333; /* Dark background for footer */
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto; /* Pushes footer to bottom if content is short */
+}
+
+/* Tablet Breakpoint */
+@media (max-width: 768px) {
+    /* Header & Navigation */
+    header {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Allow nav to take full width if needed */
+        margin-top: 10px; /* Space between title and nav if header stacks */
+    }
+
+    header nav ul li {
+        margin-left: 0; /* Remove left margin for stacked items */
+        margin-bottom: 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem; /* Reduced font size */
+    }
+
+    .hero button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Features Section */
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        flex-basis: auto; /* Reset flex-basis */
+        width: 80%;     /* Feature items take more width */
+        margin-bottom: 20px;
+    }
+    .feature:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 480px) {
+    /* Body */
+    body {
+        font-size: 0.95rem; /* Slightly reduce base font for very small screens */
+    }
+
+    /* Header */
+    header {
+        flex-direction: column; /* Stack title and nav */
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    header h1 {
+        font-size: 1.6rem; /* Further reduce title size */
+        margin-bottom: 10px; /* Space between title and nav */
+    }
+
+    header nav ul {
+        margin-top: 0; /* Reset margin as header h1 now has margin-bottom */
+    }
+
+    header nav ul li {
+        margin-bottom: 8px; /* Slightly reduce space between nav items */
+    }
+    header nav ul li a {
+        font-size: 0.95rem;
+    }
+
+
+    /* Hero Section */
+    .hero {
+        padding: 2rem 1rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.7rem; /* Further reduce font size */
+    }
+
+    .hero button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem; /* Ensure button is tappable */
+        width: 60%; /* Make button wider */
+        max-width: 250px;
+    }
+
+    /* Features Section */
+    .feature {
+        width: 95%; /* Feature items take almost full width */
+        padding: 1rem;
+    }
+    .feature p:first-child { /* Placeholder for icon */
+        font-size: 1.8rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1rem 0;
+    }
+    footer p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Styles for Page 1 and other inner pages */
+.page-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2.2rem;
+}
+
+.content-section {
+    padding: 25px;
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.content-section h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.content-section p {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.placeholder-img {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #ddd; /* Initial border, made thicker for effect */
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Responsive adjustments for content sections */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    .content-section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .content-section h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    .content-section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+     .content-section h3 {
+        font-size: 1.2rem;
+    }
+    .placeholder-img {
+        max-width: 100%;
+    }
+}
+
+/* Styles for Page 2 - Contact Form */
+.contact-form {
+    max-width: 600px; /* Limit form width for better readability */
+    margin: 20px auto; /* Center the form */
+    padding: 25px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for width calculation */
+    font-family: inherit; /* Ensure consistent font */
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resize, disable horizontal */
+    min-height: 100px;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #007bff; /* Highlight focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,123,255,0.25);
+}
+
+.submit-button {
+    display: block; /* Make button block to control width/centering */
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #007bff; /* Primary accent color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive adjustments for Contact Form */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+        margin-left: 15px; /* Add some margin to prevent touching screen edges */
+        margin-right: 15px;
+        max-width: none; /* Allow it to use more of the screen width */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        padding: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .contact-form label {
+        font-size: 0.95rem; /* Slightly smaller labels */
+        margin-bottom: 6px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        padding: 8px;
+        font-size: 0.95rem;
+    }
+
+    .submit-button {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}
+
+/* Styles for form validation messages */
+.error-message {
+    display: block;
+    color: red;
+    font-size: 0.85em; /* Slightly smaller than normal text */
+    margin-top: 4px; /* Space between field and error message */
+    /* margin-left: 2px; Ensure it aligns nicely if fields have padding */
+}
+
+.input-error {
+    border-color: red !important; /* Override other border styles to show error */
+    /* box-shadow: 0 0 3px rgba(255,0,0,0.3) !important; Optional: add a red glow */
+}
