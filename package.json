@@ -1,7 +1,7 @@
 {
   "name": "knightbot",
   "version": "1.0.0",
-  "description": "WhatsApp Bot",
+  "description": "A multi-purpose bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -10,7 +10,7 @@
     "docker:run": "docker run -e SESSION_ID=$SESSION_ID knightbot"
   },
   "keywords": [
-    "whatsapp-bot"
+    "bot"
   ],
   "author": "",
   "license": "ISC",

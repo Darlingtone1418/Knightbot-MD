@@ -75,7 +75,6 @@ const clearSessionCommand = require('./commands/clearsession');
 const { autoStatusCommand, handleStatusUpdate } = require('./commands/autostatus');
 const { simpCommand } = require('./commands/simp');
 const { stupidCommand } = require('./commands/stupid');
-const stickerTelegramCommand = require('./commands/stickertelegram');
 const textmakerCommand = require('./commands/textmaker');
 const { handleAntideleteCommand, handleMessageRevocation, storeMessage } = require('./commands/antidelete');
 const clearTmpCommand = require('./commands/cleartmp');
@@ -99,7 +98,6 @@ const videoCommand = require('./commands/video');
 // Global settings
 global.packname = settings.packname;
 global.author = settings.author;
-global.channelLink = "https://whatsapp.com/channel/0029Va90zAnIHphOuO8Msp3A";
 global.ytch = "Mr Unique Hacker";
 
 // Add this near the top of main.js with other global configurations
@@ -632,9 +630,6 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 break;
             case userMessage.startsWith('.emojimix') || userMessage.startsWith('.emix'):
                 await emojimixCommand(sock, chatId, message);
-                break;
-            case userMessage.startsWith('.tg') || userMessage.startsWith('.stickertelegram') || userMessage.startsWith('.tgsticker') || userMessage.startsWith('.telesticker'):
-                await stickerTelegramCommand(sock, chatId, message);
                 break;
 
             case userMessage === '.vv':
